@@ -2,7 +2,7 @@ import "./env.js";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-// import api from "./routes/index.js";
+import api from "./routes/index.js";
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "public/index.html");
 });
 
-// app.use("/api", api);
+app.use("/api", api);
 
 const port = process.env.PORT || 5000;
 
