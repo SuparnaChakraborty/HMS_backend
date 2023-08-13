@@ -51,7 +51,7 @@ const signin = async (req, res) => {
     }
 
     if (!foundUser.verified) {
-      return res.status(401).json({
+      return res.status(400).json({
         error: true,
         errorMsg:
           "This email is not verified by the Admin. Please login after the verification process is completed.",
@@ -71,7 +71,7 @@ const signin = async (req, res) => {
       });
     } else {
       return res
-        .status(401)
+        .status(400)
         .json({ error: true, errorMsg: "Incorrect Password!" });
     }
   } catch (error) {
