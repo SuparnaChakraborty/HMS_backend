@@ -7,7 +7,7 @@ import api from "./routes/index.js";
 const app = express();
 
 const { USER_NAME, PASSWORD } = process.env;
-const uri = 'mongodb+srv://Suparna:ucRYh73Key5uwCRh@hms.pimlxrt.mongodb.net/?retryWrites=true&w=majority';
+const uri = "mongodb://127.0.0.1:27017/MedCare";
 //use the following uri when running local MongoDB server
 // const uri = "mongodb://127.0.0.1:27017/MedCare";
 
